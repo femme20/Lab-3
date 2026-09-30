@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEEE Conference Paper Template — Bootstrap</title>
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-secondary-subtle py-4" style="font-family: 'Times New Roman', Times, serif;">
+
+  <article class="container bg-white shadow-sm p-4 p-md-5 my-2" style="max-width: 8.5in;">
+
+    <!-- ================= FULL WIDTH TITLE & AUTHORS ================= -->
+    <header class="text-center mb-4">
+      <h1 class="h3 fw-normal mb-2 text-dark">
+        Empirical Evaluation of Energy Saving Tools for Android Applications: A Proposed Study
+      </h1>
+      <p class="fst-italic text-secondary small mb-3">
+        Draft conference paper template conforming to IEEE 2-column specifications.
+      </p>
+
+      <!-- 6 Authors Grid: 3 columns x 2 rows in Bootstrap Grid -->
+      <div class="row row-cols-1 row-cols-md-3 g-3 text-center my-3">
+        <div class="col small">
+          <p class="fw-bold mb-0">Jane Doe</p>
+          <small class="text-muted d-block">Dept. of Computer Science</small>
+          <small class="text-muted d-block">Tech University</small>
+          <small class="fst-italic">jane.doe@techuni.edu</small>
+        </div>
+
+        <div class="col small">
+          <p class="fw-bold mb-0">John Smith</p>
+          <small class="text-muted d-block">Dept. of Software Eng.</small>
+          <small class="text-muted d-block">Tech University</small>
+          <small class="fst-italic">john.smith@techuni.edu</small>
+        </div>
+
+        <div class="col small">
+          <p class="fw-bold mb-0">Alice Johnson</p>
+          <small class="text-muted d-block">Energy Systems Group</small>
+          <small class="text-muted d-block">National Research Inst.</small>
+          <small class="fst-italic">alice.j@nri.gov</small>
+        </div>
+
+        <div class="col small">
+          <p class="fw-bold mb-0">Bob Williams</p>
+          <small class="text-muted d-block">School of Electrical Eng.</small>
+          <small class="text-muted d-block">State University</small>
+          <small class="fst-italic">bob.williams@state.edu</small>
+        </div>
+
+        <div class="col small">
+          <p class="fw-bold mb-0">Eiko Sato</p>
+          <small class="text-muted d-block">Mobile Computing Dept.</small>
+          <small class="text-muted d-block">Future Labs, Tokyo</small>
+          <small class="fst-italic">eiko.sato@futurelabs.jp</small>
+        </div>
+
+        <div class="col small">
+          <p class="fw-bold mb-0">Fahad Al-Saadi</p>
+          <small class="text-muted d-block">Mobile Computing Dept.</small>
+          <small class="text-muted d-block">Future Labs, Tokyo</small>
+          <small class="fst-italic">fahad.alsaadi@futurelabs.jp</small>
+        </div>
+      </div>
+      <hr class="my-3">
+    </header>
+
+    <!-- ================= TWO-COLUMN ACADEMIC BODY (Bootstrap Grid) ================= -->
+    <div class="row g-4" style="font-size: 10pt; text-align: justify;">
+
+      <!-- LEFT COLUMN -->
+      <div class="col-12 col-md-6">
+
+        <!-- Abstract & Keywords -->
+        <section class="mb-3 small">
+          <p class="fw-bold mb-2">
+            <em>Abstract</em>&mdash;This proposal describes a controlled empirical evaluation of tools intended to
+            reduce energy consumption in Android applications. We examine static analysis (Android Lint) and dynamic
+            profiling (Android Studio Profiler) across 30 open-source applications and six physical devices. Baseline
+            and refactored versions undergo paired energy measurements to determine practical effectiveness.
+          </p>
+          <p class="fw-bold mb-3">
+            <em>Keywords</em>&mdash;Android, energy consumption, software engineering, refactoring, power profiling,
+            continuous integration.
+          </p>
+        </section>
+
+        <!-- Section I: Introduction -->
+        <section class="mb-3">
+          <h2 class="h6 text-center text-uppercase fw-bold mb-2 mt-3" style="font-variant: small-caps;">I. INTRODUCTION
+          </h2>
+          <p class="mb-2" style="text-indent: 14pt;">
+            Energy optimization in Android applications requires empirical evidence that a code modification lowers
+            battery drain during active execution without compromising functionality. Prior studies by Palomba et al.
+            examined code smells in Android apps, demonstrating relationships between code architecture and battery life
+            [1].
+          </p>
+          <p class="mb-2" style="text-indent: 14pt;">
+            The primary contribution of this study is a reproducible measurement protocol evaluating energy alongside
+            functional correctness, latency, developer effort, and CI deployment feasibility.
+          </p>
+        </section>
+
+        <!-- Section II: Equations -->
+        <section class="mb-3">
+          <h2 class="h6 text-center text-uppercase fw-bold mb-2 mt-3" style="font-variant: small-caps;">II. MATHEMATICAL
+            FORMULATION</h2>
+          <p class="mb-2" style="text-indent: 14pt;">
+            Total energy consumption \(E_{\text{total}}\) is calculated by integrating instantaneous bus voltage
+            \(V(t)\) and current draw \(I(t)\) across the benchmark workload duration \(T\):
+          </p>
+
+          <!-- Equation 1 in Bootstrap Flexbox -->
+          <div class="d-flex justify-content-between align-items-center my-2 px-3 bg-light py-1 border rounded">
+            <span class="flex-grow-1 text-center font-monospace">E<sub>total</sub> = &int;<sub>0</sub><sup>T</sup> V(t)
+              &middot; I(t) dt</span>
+            <span class="fw-bold">(1)</span>
+          </div>
+
+          <p class="mb-2" style="text-indent: 14pt;">
+            The relative percentage energy savings \(\Delta E\) between the baseline and refactored versions is
+            formulated as:
+          </p>
+
+          <!-- Equation 2 in Bootstrap Flexbox -->
+          <div class="d-flex justify-content-between align-items-center my-2 px-3 bg-light py-1 border rounded">
+            <span class="flex-grow-1 text-center font-monospace">&Delta;E = [(E<sub>baseline</sub> &minus;
+              E<sub>refactored</sub>) / E<sub>baseline</sub>] &times; 100</span>
+            <span class="fw-bold">(2)</span>
+          </div>
+        </section>
+
+      </div><!-- /.col (Left) -->
+
+      <!-- RIGHT COLUMN -->
+      <div class="col-12 col-md-6">
+
+        <!-- Section III: Experimental Setup & Tables -->
+        <section class="mb-3">
+          <h2 class="h6 text-center text-uppercase fw-bold mb-2 mt-3" style="font-variant: small-caps;">III.
+            EXPERIMENTAL SETUP &amp; TABLES</h2>
+          <p class="mb-2" style="text-indent: 14pt;">
+            Table I summarizes the planned metrics and measurement equipment used across all experimental test runs.
+          </p>
+
+          <!-- TABLE I: Bootstrap Bordered Small Table -->
+          <div class="my-3 text-center">
+            <p class="small text-uppercase mb-1 fw-bold" style="font-variant: small-caps;">TABLE I. PLANNED EXPERIMENTAL
+              OUTCOMES</p>
+            <table class="table table-sm table-bordered text-start align-middle mb-1" style="font-size: 8.5pt;">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col" style="width: 35%;">Outcome Metric</th>
+                  <th scope="col">Measurement Protocol</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold">Primary Energy</td>
+                  <td>Joules (J) per workload via Monsoon Power Monitor.</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Execution Latency</td>
+                  <td>Median and 95th percentile response latency in ms.</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Correctness</td>
+                  <td>Automated UI Automator assertions &amp; pass rates.</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Developer Effort</td>
+                  <td>Time required (hours) to diagnose and refactor.</td>
+                </tr>
+              </tbody>
+            </table>
+            <small class="text-muted fst-italic">Measured across 6 test devices with 10 repetitions per trial.</small>
+          </div>
+
+          <h2 class="h6 text-center text-uppercase fw-bold mb-2 mt-4" style="font-variant: small-caps;">IV. CONCLUSION
+          </h2>
+          <p class="mb-2" style="text-indent: 14pt;">
+            This study outlines an empirical benchmark protocol for Android software energy refactoring. By combining
+            static analysis and dynamic profiling, developers can identify actionable optimizations while verifying
+            behavioral correctness.
+          </p>
+        </section>
+
+        <!-- References -->
+        <section class="mb-3">
+          <h2 class="h6 text-center text-uppercase fw-bold mb-2 mt-3" style="font-variant: small-caps;">REFERENCES</h2>
+          <ol class="small ps-3 text-start" style="font-size: 8pt; line-height: 1.4;">
+            <li class="mb-1">
+              F. Palomba et al., &ldquo;On the impact of code smells on energy consumption of mobile apps,&rdquo;
+              <em>Inf. Softw. Technol.</em>, vol. 105, pp. 43&ndash;55, 2019.
+            </li>
+            <li class="mb-1">
+              E. Iannone et al., &ldquo;Refactoring Android-specific energy smells: A plugin for Android Studio,&rdquo;
+              in <em>Proc. IEEE/ACM ICPC</em>, 2020.
+            </li>
+            <li class="mb-1">
+              Google, &ldquo;Optimize battery use for task scheduling APIs,&rdquo; Android Developers Documentation,
+              2026.
+            </li>
+          </ol>
+        </section>
+
+      </div><!-- /.col (Right) -->
+
+    </div><!-- /.row -->
+
+
+
+  </article>
+</body>
+
+</html>

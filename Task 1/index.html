@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BSCS-V-A Timetable — Bootstrap</title>
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-light py-4">
+
+  <div class="container-fluid px-3 px-md-5">
+
+    <!-- Header Section -->
+    <div class="text-center mb-4">
+      <h1 class="display-6 fw-bold text-primary">BSCS-V-A (Shift-I)</h1>
+      <p class="text-muted mb-0">Air University Islamabad &bull; Department of Computer Science</p>
+    </div>
+
+    <!-- Responsive Table Card -->
+    <div class="card shadow-sm border-0 rounded-3 overflow-hidden">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle text-center mb-0" style="min-width: 1000px;">
+
+          <!-- Table Headings -->
+          <thead class="table-dark">
+            <tr>
+              <th scope="col" style="width: 70px;">Air Uni</th>
+              <th scope="col">08:00 - 09:00</th>
+              <th scope="col">09:00 - 10:00</th>
+              <th scope="col">10:00 - 11:00</th>
+              <th scope="col">11:00 - 12:00</th>
+              <th scope="col">12:00 - 01:00</th>
+              <th scope="col">01:00 - 02:00</th>
+              <th scope="col">02:00 - 03:00</th>
+              <th scope="col">03:00 - 04:00</th>
+              <th scope="col">04:00 - 05:00</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- Monday -->
+            <tr>
+              <th scope="row" class="table-secondary fw-bold fs-4">Mo</th>
+              <td>
+                <small class="text-muted d-block">CS-Ms Maryam</small>
+                <strong>Artificial Intelligence</strong><br>
+                <small class="text-muted">C-205</small>
+              </td>
+              <td>
+                <small class="text-muted d-block">CS-Ms Warda</small>
+                <strong>Operating Systems</strong><br>
+                <small class="text-muted">LH-01</small>
+              </td>
+              <td>
+                <small class="text-muted d-block">CS-Mr Junaid</small>
+                <strong>Algorithms (DAA)</strong><br>
+                <small class="text-muted">C-202</small>
+              </td>
+              <td>
+                <small class="text-muted d-block">Math-Dr Waqas</small>
+                <strong>Linear Algebra</strong><br>
+                <small class="text-muted">C-301</small>
+              </td>
+              <td class="bg-body-secondary"></td>
+              <td>
+                <small class="text-muted d-block">AUSOM-Ms Ayesha</small>
+                <strong>Intro to Management</strong><br>
+                <small class="text-muted">C-303</small>
+              </td>
+              <td class="bg-body-secondary"></td>
+              <td class="bg-body-secondary"></td>
+              <td class="bg-body-secondary"></td>
+            </tr>
+
+            <!-- Tuesday: Multi-Period AI Lab Block -->
+            <tr>
+              <th scope="row" class="table-secondary fw-bold fs-4">Tu</th>
+              <td colspan="3" class="table-info">
+                <span class="badge bg-primary mb-1">3-Hour Lab Block</span><br>
+                <strong class="fs-6">Artificial Intelligence Lab</strong><br>
+                <small>CS-Ms Maryam Wardah &bull; Lab 5 A-Block</small>
+              </td>
+              <td class="bg-body-secondary"></td>
+              <td>
+                <small class="text-muted d-block">Math-Dr Waqas</small>
+                <strong>Linear Algebra</strong><br>
+                <small class="text-muted">C-203</small>
+              </td>
+              <td>
+                <small class="text-muted d-block">CS-Mr Junaid</small>
+                <strong>Algorithms (DAA)</strong><br>
+                <small class="text-muted">C-302</small>
+              </td>
+              <td>
+                <small class="text-muted d-block">CS-Ms Warda</small>
+                <strong>Operating Systems</strong><br>
+                <small class="text-muted">LH-01</small>
+              </td>
+              <td class="bg-body-secondary"></td>
+              <td class="bg-body-secondary"></td>
+            </tr>
+
+            <!-- Wednesday: Multi-Period OS Lab Block -->
+            <tr>
+              <th scope="row" class="table-secondary fw-bold fs-4">We</th>
+              <td>
+                <small class="text-muted d-block">CS-Mr Junaid</small>
+                <strong>Algorithms (DAA)</strong><br>
+                <small class="text-muted">C-302</small>
+              </td>
+              <td class="bg-body-secondary"></td>
+              <td class="bg-body-secondary"></td>
+              <td colspan="3" class="table-warning">
+                <span class="badge bg-warning text-dark mb-1">3-Hour Lab Block</span><br>
+                <strong class="fs-6">Operating Systems Lab</strong><br>
+                <small>CS-Ms Warda Aslam &bull; Lab 13 C-Block</small>
+              </td>
+              <td>
+                <small class="text-muted d-block">CS-Mr Hafiz Obiad</small>
+                <strong>Full Stack Web Dev</strong><br>
+                <small class="text-muted">LH-01</small>
+              </td>
+              <td class="bg-body-secondary"></td>
+              <td class="bg-body-secondary"></td>
+            </tr>
+
+            <!-- Thursday: Multi-Period Full Stack Lab Block -->
+            <tr>
+              <th scope="row" class="table-secondary fw-bold fs-4">Th</th>
+              <td class="bg-body-secondary"></td>
+              <td>
+                <small class="text-muted d-block">CS-Ms Maryam</small>
+                <strong>Artificial Intelligence</strong><br>
+                <small class="text-muted">C-202</small>
+              </td>
+              <td class="bg-body-secondary"></td>
+              <td colspan="3" class="table-success">
+                <span class="badge bg-success mb-1">3-Hour Lab Block</span><br>
+                <strong class="fs-6">Full Stack Web Dev Lab</strong><br>
+                <small>CS-Mr Hafiz Obiad Ullah Khan &bull; Lab 5 A-Block</small>
+              </td>
+              <td>
+                <small class="text-muted d-block">CS-Mr Hafiz Obiad</small>
+                <strong>Full Stack Web Dev</strong><br>
+                <small class="text-muted">LH-01</small>
+              </td>
+              <td class="bg-body-secondary"></td>
+              <td class="bg-body-secondary"></td>
+            </tr>
+
+            <!-- Friday -->
+            <tr>
+              <th scope="row" class="table-secondary fw-bold fs-4">Fr</th>
+              <td class="bg-body-secondary"></td>
+              <td class="bg-body-secondary"></td>
+              <td>
+                <small class="text-muted d-block">AUSOM-Ms Ayesha</small>
+                <strong>Management</strong><br>
+                <small class="text-muted">C-302</small>
+              </td>
+              <td>
+                <small class="text-muted d-block">Math-Dr Waqas</small>
+                <strong>Linear Algebra</strong><br>
+                <small class="text-muted">C-301</small>
+              </td>
+              <td>
+                <small class="text-muted d-block">CS-Ms Eeman</small>
+                <strong>Advisory Class</strong><br>
+                <small class="text-muted">C-202</small>
+              </td>
+              <td class="bg-body-secondary"></td>
+              <td class="bg-body-secondary"></td>
+              <td class="bg-body-secondary"></td>
+              <td class="bg-body-secondary"></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

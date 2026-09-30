@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Cylindrical Archive — Interstellar Space</title>
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: #07090e;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+
+        /* 3D Perspective Stage */
+        .stage {
+            perspective: 1000px;
+            height: 80vh;
+        }
+
+        /* 3D Carousel Cylinder */
+        .carousel-3d {
+            position: relative;
+            width: 200px;
+            height: 280px;
+            transform-style: preserve-3d;
+            animation: spin 24s linear infinite;
+        }
+
+        .carousel-3d:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes spin {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        /* 8 Cylinder Cards spaced at 45 degrees */
+        .card-3d {
+            position: absolute;
+            width: 200px;
+            height: 280px;
+            transform: rotateY(calc(var(--i) * 45deg)) translateZ(340px);
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .card-3d:hover {
+            transform: rotateY(calc(var(--i) * 45deg)) translateZ(370px) scale(1.05);
+        }
+
+        /* Pure CSS Modal (:target) without JavaScript */
+        .modal-layer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1050;
+            background: rgba(0, 0, 0, 0.75);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-layer:target {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body class="text-white d-flex flex-column justify-content-between py-3">
+
+    <!-- Header HUD -->
+    <header class="text-center pt-2">
+        <h4 class="fw-bold tracking-wide text-uppercase text-info mb-1">INTERSTELLAR 3D ARCHIVE</h4>
+        <p class="text-secondary small mb-0">Hover to pause orbit &bull; Click any card to view details (No JS required)</p>
+    </header>
+
+    <!-- 3D Carousel Stage -->
+    <main class="stage d-flex align-items-center justify-content-center">
+        <div class="carousel-3d">
+
+            <!-- Card 1 -->
+            <a href="#modal-1" class="card-3d rounded-3 overflow-hidden shadow-lg border border-secondary" style="--i: 1;">
+                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=500&q=80"
+                    alt="Gargantua" class="w-100 h-100 object-fit-cover" />
+            </a>
+
+            <!-- Card 2 -->
+            <a href="#modal-2" class="card-3d rounded-3 overflow-hidden shadow-lg border border-secondary" style="--i: 2;">
+                <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=500&q=80"
+                    alt="Miller" class="w-100 h-100 object-fit-cover" />
+            </a>
+
+            <!-- Card 3 -->
+            <a href="#modal-3" class="card-3d rounded-3 overflow-hidden shadow-lg border border-secondary" style="--i: 3;">
+                <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=500&q=80"
+                    alt="Edmunds" class="w-100 h-100 object-fit-cover" />
+            </a>
+
+            <!-- Card 4 -->
+            <a href="#modal-4" class="card-3d rounded-3 overflow-hidden shadow-lg border border-secondary" style="--i: 4;">
+                <img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=500&q=80"
+                    alt="Mann" class="w-100 h-100 object-fit-cover" />
+            </a>
+
+            <!-- Card 5 -->
+            <a href="#modal-5" class="card-3d rounded-3 overflow-hidden shadow-lg border border-secondary" style="--i: 5;">
+                <img src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=500&q=80"
+                    alt="Tesseract" class="w-100 h-100 object-fit-cover" />
+            </a>
+
+            <!-- Card 6 -->
+            <a href="#modal-6" class="card-3d rounded-3 overflow-hidden shadow-lg border border-secondary" style="--i: 6;">
+                <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=500&q=80"
+                    alt="Endurance" class="w-100 h-100 object-fit-cover" />
+            </a>
+
+            <!-- Card 7 -->
+            <a href="#modal-7" class="card-3d rounded-3 overflow-hidden shadow-lg border border-secondary" style="--i: 7;">
+                <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=500&q=80"
+                    alt="Wormhole" class="w-100 h-100 object-fit-cover" />
+            </a>
+
+            <!-- Card 8 -->
+            <a href="#modal-8" class="card-3d rounded-3 overflow-hidden shadow-lg border border-secondary" style="--i: 8;">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500&q=80"
+                    alt="Cooper" class="w-100 h-100 object-fit-cover" />
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Footer Note -->
+    <footer class="text-center text-secondary small pb-2">
+        Pure HTML &amp; CSS: 3D Transforms &bull; Bootstrap Modal Layout &bull; Zero JavaScript
+    </footer>
+
+    <!-- ================= MODALS (Pure CSS :target with Bootstrap Modal Classes) ================= -->
+
+    <!-- Modal 1 -->
+    <div class="modal-layer p-3" id="modal-1">
+        <div class="modal-dialog modal-dialog-centered w-100" style="max-width: 500px;">
+            <div class="modal-content bg-dark text-white border-secondary shadow-lg">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title"><span class="badge bg-info text-dark me-2">01</span>Gargantua Black Hole</h5>
+                    <a href="#close" class="btn-close btn-close-white" aria-label="Close"></a>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-0">A supermassive spinning black hole where gravitational time dilation causes one hour on nearby planets to equal seven years on Earth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal-layer p-3" id="modal-2">
+        <div class="modal-dialog modal-dialog-centered w-100" style="max-width: 500px;">
+            <div class="modal-content bg-dark text-white border-secondary shadow-lg">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title"><span class="badge bg-info text-dark me-2">02</span>Miller's Water Planet</h5>
+                    <a href="#close" class="btn-close btn-close-white" aria-label="Close"></a>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-0">An ocean world covered entirely in shallow water with colossal tidal skyscraper waves caused by Gargantua's extreme gravity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal-layer p-3" id="modal-3">
+        <div class="modal-dialog modal-dialog-centered w-100" style="max-width: 500px;">
+            <div class="modal-content bg-dark text-white border-secondary shadow-lg">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title"><span class="badge bg-info text-dark me-2">03</span>Edmunds' Planet</h5>
+                    <a href="#close" class="btn-close btn-close-white" aria-label="Close"></a>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-0">A habitable world with breathable air, solid terrain, and sustainable conditions for humanity's new civilization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal-layer p-3" id="modal-4">
+        <div class="modal-dialog modal-dialog-centered w-100" style="max-width: 500px;">
+            <div class="modal-content bg-dark text-white border-secondary shadow-lg">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title"><span class="badge bg-info text-dark me-2">04</span>Mann's Ice Planet</h5>
+                    <a href="#close" class="btn-close btn-close-white" aria-label="Close"></a>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-0">A desolate planet of frozen clouds and toxic ammonia atmosphere with no solid ground for human survival.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal-layer p-3" id="modal-5">
+        <div class="modal-dialog modal-dialog-centered w-100" style="max-width: 500px;">
+            <div class="modal-content bg-dark text-white border-secondary shadow-lg">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title"><span class="badge bg-info text-dark me-2">05</span>The 5D Tesseract</h5>
+                    <a href="#close" class="btn-close btn-close-white" aria-label="Close"></a>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-0">A five-dimensional physical manifestation of time allowing gravitational communication across history.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="modal-layer p-3" id="modal-6">
+        <div class="modal-dialog modal-dialog-centered w-100" style="max-width: 500px;">
+            <div class="modal-content bg-dark text-white border-secondary shadow-lg">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title"><span class="badge bg-info text-dark me-2">06</span>Endurance Spaceship</h5>
+                    <a href="#close" class="btn-close btn-close-white" aria-label="Close"></a>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-0">Ring-shaped exploration spacecraft spinning at 5.6 RPM to create artificial Earth-like centrifugal gravity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7 -->
+    <div class="modal-layer p-3" id="modal-7">
+        <div class="modal-dialog modal-dialog-centered w-100" style="max-width: 500px;">
+            <div class="modal-content bg-dark text-white border-secondary shadow-lg">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title"><span class="badge bg-info text-dark me-2">07</span>Saturn Wormhole</h5>
+                    <a href="#close" class="btn-close btn-close-white" aria-label="Close"></a>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-0">Spherical spacetime curvature near Saturn providing instantaneous transit across galaxies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8 -->
+    <div class="modal-layer p-3" id="modal-8">
+        <div class="modal-dialog modal-dialog-centered w-100" style="max-width: 500px;">
+            <div class="modal-content bg-dark text-white border-secondary shadow-lg">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title"><span class="badge bg-info text-dark me-2">08</span>Cooper Space Station</h5>
+                    <a href="#close" class="btn-close btn-close-white" aria-label="Close"></a>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-0">Cylindrical O'Neill colony orbiting Saturn providing artificial gravity, cities, and agriculture for humanity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
