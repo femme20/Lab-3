@@ -1,5 +1,5 @@
-<img width="1915" height="916" alt="image" src="https://github.com/user-attachments/assets/f2503213-dcf9-4c99-adf6-056cfda84c81" /># Full Stack Development — Lab 3
 
+# Full Stack Development — Lab 3
 A collection of **Full Stack Development Lab 3 tasks** completed using HTML, CSS, and Bootstrap 5.
 
 ## 🚀 What's Included
@@ -60,34 +60,29 @@ No custom JavaScript authentication has been added.
 <img width="1917" height="900" alt="image" src="https://github.com/user-attachments/assets/dd0b41f0-2ead-4c25-82c4-b6d1d857c201" />
 
 
-![E-Commerce Homepage](IMAGE_PLACEHOLDER)
+
 
 ### Product Listing
 <img width="1916" height="910" alt="image" src="https://github.com/user-attachments/assets/62a6a294-426c-4d19-84b0-47313e89f58b" />
 
 
-![Product Listing](IMAGE_PLACEHOLDER)
 
 ### Login / Signup
 
 
-<img width="726" height="662" alt="image" src="https://github.com/user-attachments/assets/379a4917-01af-4bb7-a78d-a60041ea25c6" />
-<img width="738" height="502" alt="image" src="https://github.com/user-attachments/assets/bc378ab7-0022-4880-9cd1-94968b62fc48" />
+<img width="726" height="662" alt="image" src="https://github.com/user-attachments/assets/379a4917-01af-4bb7-a78d-a60041ea25c6" /> <img width="738" height="502" alt="image" src="https://github.com/user-attachments/assets/bc378ab7-0022-4880-9cd1-94968b62fc48" />
 
-![Login Modal](IMAGE_PLACEHOLDER)
+
 
 ### Shopping Cart
 <img width="1915" height="916" alt="image" src="https://github.com/user-attachments/assets/4c196fb6-df70-4507-b048-5a72f9c3397a" />
 
 
-![Shopping Cart](IMAGE_PLACEHOLDER)
 
 ### Checkout
 
 <img width="1917" height="902" alt="image" src="https://github.com/user-attachments/assets/d2f130b2-1957-4d3a-8828-f22239acf754" />
 
-
-![Checkout](IMAGE_PLACEHOLDER)
 
 ### Reviews 
 <img width="1906" height="897" alt="image" src="https://github.com/user-attachments/assets/b36114f1-a1ea-4b07-ac63-985a25efe3e7" />
